@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+}
+
+.btn-degradado {
+  background: linear-gradient(to bottom, #6201FC, black);
+  border: 2px solid #6201FC;
+}
+
+.text-degradado {
+  background: linear-gradient(350deg, #6201FC, #ffffff);
+  background-clip: text;
+  color: transparent;
+}
+
+.text-degrada {
+  background: linear-gradient(to left, #6201FC, #ffffff);
+  background-clip: text;
+  color: transparent;
+}
