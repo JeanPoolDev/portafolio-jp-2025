@@ -6,18 +6,35 @@ body {
 }
 
 .btn-degradado {
-  background: linear-gradient(to bottom, #6201FC, black);
-  border: 2px solid #6201FC;
+  background: linear-gradient(to bottom, #6201fc, black);
+  border: 2px solid #6201fc;
 }
 
 .text-degradado {
-  background: linear-gradient(350deg, #6201FC, #ffffff);
+  background: linear-gradient(350deg, #6201fc, #ffffff);
   background-clip: text;
   color: transparent;
 }
 
 .text-degrada {
-  background: linear-gradient(to left, #6201FC, #ffffff);
+  background: linear-gradient(to left, #6201fc, #ffffff);
   background-clip: text;
   color: transparent;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid #6101fc65;
+}
+
+.efecto:hover {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px sólido rgba(255, 255, 255, 0, 18);
 }
