@@ -2,7 +2,7 @@ export function Header() {
   return (
     <header className="fixed w-[90%] h-[100px] flex items-center justify-between z-20">
       <h1 className="text-3xl text-[#6201FC] font-bold">JPOL</h1>
-      <div className="rounded-xl flex gap-4 p-3 text-lg font-semibold">
+      <div className="rounded-xl hidden sm:flex gap-4 p-3 text-lg font-semibold">
         <a
           href="#"
           className="px-5 py-2 rounded-xl
@@ -11,14 +11,14 @@ export function Header() {
           Inicio
         </a>
         <a
-          href="#"
+          href="#proyectos"
           className="px-3 py-2 rounded-xl btn-degradado 
            text-white"
         >
           Proyectos
         </a>
         <a
-          href="#"
+          href="#tecnologias"
           className="px-3 py-2 rounded-xl btn-degradado 
            text-white"
         >
