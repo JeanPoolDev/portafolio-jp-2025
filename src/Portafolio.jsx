@@ -7,17 +7,17 @@ export function Portafolio() {
     <div className="h-auto w-[90%] mx-auto space-y-10">
       <Header />
 
-      <div className="h-auto pt-[100px] bg-[url('/fondo.png')] bg-cover">
+      <div className="h-auto pt-[100px] bg-[url('/fondo.png')] bg-cover aspect-[16/9]">
         <div className="flex items-center justify-center h-[300px]">
           <h1
-            className="text-white text-4xl md:text-6xl px-0 xl:px-[400px] text-center
+            className="text-white text-4xl md:text-6xl px-0 2xl:px-[400px] text-center
           text-degradado font-semibold z-20 p-1"
           >
             Soy Jean Pool, Front-End Developer y Diseñador UX/UI
           </h1>
         </div>
         <div className="flex justify-center items-center z-10 border">
-          <img src="/yo.png" alt="" className="object-cover w-full md:w-[60%]" />
+          <img src="/yo.png" alt="" className="object-cover w-full md:w-[60%] aspect-3/2" />
         </div>
       </div>
 
@@ -54,7 +54,9 @@ export function Portafolio() {
 
         <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white gap-4 h-full w-full mb-10">
           {tecnologias.map((tec) => (
-            <div className="glassmorphism px-5 md:px-10 py-8 md:py-12 space-y-10">
+            <div
+              key={tec.id}
+              className="glassmorphism px-5 md:px-10 py-8 md:py-12 space-y-10">
               {tec.icono}
               <h1 className="text-3xl">{tec.titulo}</h1>
               <p className="text-2xl">{tec.subtitulo}</p>
@@ -83,7 +85,7 @@ export function Portafolio() {
             <img
               src="/musicas.jpg"
               alt="imagen"
-              className="w-full h-full object-cover efecto rounded-4xl"
+              className="w-full h-full object-cover efecto rounded-4xl aspect-[16/9]"
             />
           </a>
         </div>
@@ -93,7 +95,7 @@ export function Portafolio() {
             <img
               src="/pan.jpg"
               alt="imagen"
-              className="w-full h-full object-cover efecto rounded-4xl"
+              className="w-full h-full object-cover efecto rounded-4xl aspect-[16/9]"
             />
           </a>
         </div>
@@ -104,10 +106,10 @@ export function Portafolio() {
           Porfaolio de @Jean Pool
         </h1>
         <div className="flex gap-4">
-          <a href="#" className="hover:scale-125 transition-all">
+          <a href="https://github.com/JeanPoolDev" target="_blank" className="hover:scale-125 transition-all">
             <Github />
           </a>
-          <a href="#" className="hover:scale-125 transition-all">
+          <a href="https://www.linkedin.com/in/jean-pool-rojas-avila-70535b251/" target="_blank" className="hover:scale-125 transition-all">
             <Linkeding />
           </a>
         </div>
