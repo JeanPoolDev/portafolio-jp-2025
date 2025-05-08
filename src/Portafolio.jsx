@@ -1,13 +1,36 @@
+import { useState } from "react";
 import { Header } from "./components/Header";
 import { tecnologias } from "./data/tecnologias";
 import { Github, Linkeding } from "./icons";
 
 export function Portafolio() {
+
+  const [menu, setMenu] = useState(false);
+
   return (
-    <div className="h-auto w-[90%] mx-auto space-y-10">
+    <div className="h-auto w-[90%] mx-auto ">
+
+      <div className="flex md:hidden">
+        <button
+          onClick={() => setMenu(!menu)}
+          className="fixed top-8 right-5 bg-black text-white outline outline-[#6201FC] px-3 py-2 rounded-xl font-semibold cursor-pointer 
+          transition-all hover:bg-[#6201FC] z-40 ">
+          Modal
+        </button>
+        <div className="fixed flex flex-col bg-[url('https://i.pinimg.com/736x/65/c2/73/65c27380f1ccc9c6cebc6a126855e7e6.jpg')] bg-cover w-screen h-screen z-30 
+        text-white items-center justify-center text-4xl gap-5"
+          style={{
+            display: menu ? 'none' : 'flex'
+          }}>
+          <a href="#" className="-translate-4 transition-all hover:tracking-[.20em] font-semibold">Inicio</a>
+          <a href="#proyectos" className="-translate-4 transition-all hover:tracking-[.20em] font-semibold">Proyectos</a>
+          <a href="#tecnologias" className="-translate-4 transition-all hover:tracking-[.20em] font-semibold">Tecnologias</a>
+        </div>
+      </div>
+
       <Header />
 
-      <div className="h-auto pt-[100px] bg-[url('/fondo.png')] bg-cover aspect-[16/9]">
+      <div className="h-auto pt-[100px] bg-[url('/fondo.png')] bg-cover aspect-[16/9] mb-10">
         <div className="flex items-center justify-center h-[300px]">
           <h1
             className="text-white text-4xl md:text-6xl px-0 2xl:px-[400px] text-center
@@ -21,7 +44,7 @@ export function Portafolio() {
         </div>
       </div>
 
-      <section className="h-auto lg:h-[500px] text-white px-2 md:px-10 grid place-content-center space-y-10">
+      <section className="h-auto lg:h-[500px] text-white px-2 md:px-10 grid place-content-center space-y-10 mb-10">
         <h2 className="text-4xl md:text-7xl text-degrada font-semibold">
           "No fue suerte, fue experiencia. Las cosas no pasan por casualidad
           cuando sabes lo que estás haciendo."
@@ -31,7 +54,7 @@ export function Portafolio() {
         </p>
       </section>
 
-      <section className="h-auto text-white flex flex-col justify-center items-center space-y-10" id="tecnologias">
+      <section className="h-auto text-white flex flex-col justify-center items-center space-y-10" id="tecnologias mb-10">
         <button
           className="py-4 px-6 border border-[#6201FC] rounded-full text-[#6201FC]
           text-lg md:text-3xl hover:bg-[#6201fc] hover:text-white transition-all cursor-cell"
@@ -65,7 +88,7 @@ export function Portafolio() {
         </div>
       </section>
 
-      <section className="text-white h-auto space-y-10" id="proyectos">
+      <section className="text-white h-auto space-y-10 mb-10" id="proyectos">
         <button
           className="py-4 px-6 border border-[#6201FC] rounded-full text-[#6201FC]
           text-lg md:text-3xl hover:bg-[#6201fc] hover:text-white transition-all cursor-cell"
@@ -101,7 +124,7 @@ export function Portafolio() {
         </div>
       </section>
 
-      <footer className="flex justify-between text-white h-[100px] items-center">
+      <footer className="flex justify-between text-white h-[100px] items-center mb-10">
         <h1 className="text-md md:text-xl  font-bold">
           Porfaolio de @Jean Pool
         </h1>

@@ -26,7 +26,8 @@ export function Header() {
   return (
     <header className="fixed w-[90%] h-[100px] flex items-center justify-between z-20">
       <h1 className="text-3xl text-[#6201FC] font-bold">JPOL</h1>
-      <div className="rounded-xl hidden sm:flex gap-4 p-3 text-lg font-semibold">
+
+      <div className="rounded-xl hidden md:flex gap-4 p-3 text-lg font-semibold">
         <a
           href="#"
           className="px-5 py-2 rounded-xl
@@ -70,6 +71,9 @@ export function Header() {
           {enabled ? 'Desactivado' : 'Activar'} puntero
         </button>
       </div>
+
+
+
     </header>
   );
 }
